@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <t-modal header="Title of the modal" v-model="show">
+      Content of the modal.
+      <template v-slot:footer>
+        <div class="flex justify-between">
+          <t-button type="button"> Cancel </t-button>
+          <t-button type="button"> Ok </t-button>
+        </div>
+      </template>
+    </t-modal>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { TModal, TButton } from "vue-tailwind/dist/components";
 
 export default {
   name: "App",
+  data: () => ({
+    show: true,
+  }),
   components: {
-    HelloWorld,
+    TModal,
+    TButton,
   },
 };
 </script>
