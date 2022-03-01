@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import store from "./store";
+import "bootstrap/scss/bootstrap-reboot.scss";
+import "bootstrap/scss/bootstrap-grid.scss";
 import "./assets/css/main.css";
 
 Vue.config.productionTip = false;
