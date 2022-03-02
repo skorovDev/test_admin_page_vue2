@@ -2,30 +2,19 @@
   <div class="board">
     <div>{{ title }}</div>
     <div class="board-cards">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur deleniti deserunt dicta enim et
-      facere incidunt ipsam, iusto laborum magni nemo porro quaerat quasi, quos repellat repellendus similique ut?
+      <card v-for="(card,index) in cards" :key="index" :text="card.text" :users="card.users"
+            :count-of-comments="card.countOfComments" :count-of-files="card.countOfFiles" :priority="card.priority" />
     </div>
     <button>Add task +</button>
   </div>
 </template>
 
 <script>
+import Card from "@/components/Card";
+
 export default {
   name: "Board",
+  components: { Card },
   props: {
     title: {},
     cards: {}
@@ -41,6 +30,9 @@ export default {
   min-width: 280px;
   max-height: 100%;
   align-self: flex-start;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px #D2D7E0;
+  border-radius: 5px;
 }
 
 .board-cards {

@@ -9,6 +9,14 @@ import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
 import "./assets/css/main.css";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHatWizard,faVolumeLow } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faHatWizard, faVolumeLow)
+console.log(FontAwesomeIcon);
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
 new Vue({

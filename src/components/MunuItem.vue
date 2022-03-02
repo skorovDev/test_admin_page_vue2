@@ -2,8 +2,7 @@
   <!--  <div>-->
   <a href="#">
     <div>
-      <img src="" alt="" />
-    </div>
+      <font-awesome-icon icon="angellist" />    </div>
     <div>Settings</div>
   </a>
   <!--  </div>-->
@@ -11,7 +10,7 @@
 
 <script>
 export default {
-  name: "MenuItem",
+  name: "MenuItem"
 };
 </script>
 

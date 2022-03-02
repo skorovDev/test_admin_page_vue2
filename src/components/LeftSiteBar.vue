@@ -1,6 +1,6 @@
 <template>
   <div class="left-site-bar d-flex flex-column">
-    <div class="top bg-hussle">hussle</div>
+    <div class="top bg-header">hussle</div>
 
     <div class="d-flex flex-column justify-content-between flex-grow-1">
       <div class="top-menu">
@@ -26,6 +26,9 @@ export default {
 
 <style scoped>
 .left-site-bar {
-  flex: 0 1 200px;
+  flex: 0 1 120px;
+}
+.bg-header{
+  background: #8690DB;
 }
 </style>

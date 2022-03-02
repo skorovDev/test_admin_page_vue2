@@ -2,109 +2,409 @@
   {
     "title": "card_1",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   },
   {
     "title": "card_2",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "lorem ",
+        "users": [
+          {}
+        ],
+        "countOfComments": 6,
+        "countOfFiles": 4,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   },
   {
     "title": "card_3",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   },
   {
     "title": "card_4",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   },
   {
     "title": "card_5",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   },
   {
     "title": "card_6",
     "cards": [
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {},
-      {}
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 1
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 2
+      },
+      {
+        "text": "",
+        "users": [
+          {}
+        ],
+        "countOfComments": 0,
+        "countOfFiles": 0,
+        "priority": 3
+      }
     ]
   }
 ]

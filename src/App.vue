@@ -6,12 +6,12 @@
       <v-header />
 
       <div class="d-flex flex-column right-content">
-        <div class="d-flex justify-content-between">
+        <div class="right-content-header d-flex justify-content-between">
           <div>Studio Board</div>
           <div>icone</div>
         </div>
-        <div class="bg-hussle content d-flex">
-          <board v-for="board in boards" :key="board.title" :title="board.title" />
+        <div class=" content d-flex">
+          <board v-for="(board,index) in boards" :key="index" :title="board.title" :cards="board.cards" />
         </div>
       </div>
     </div>
@@ -37,11 +37,11 @@ export default {
 </script>
 
 <style lang="scss">
-div {
-  border: 1px solid;
-  //padding: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
+//div {
+//  border: 1px solid;
+//  //padding: 10px;
+//  background-color: rgba(0, 0, 0, 0.1);
+//}
 
 #app {
   max-width: 100%;
@@ -49,18 +49,16 @@ div {
   max-height: 100%;
 }
 
-.h-100 {
-  height: 100%;
-}
-
-.left {
-}
-
 .bg-hussle {
   background: linear-gradient(90deg, #9ea7fc 0%, #65b6f7 124.87%);
 }
 
+.right-content-header {
+  padding: 35px 0;
+}
+
 .content {
+  column-gap: 40px;
   flex: 1 1 100%;
   overflow-x: auto;
 }
@@ -69,11 +67,13 @@ div {
   display: flex;
   flex-direction: column;
   flex: 1 1 100%;
-  max-width: calc(100% - 200px);
+  max-width: calc(100% - 120px);
 }
 
 .right-content {
   flex: 1 1 100%;
   max-height: calc(100% - 28px);
+  background: #EEF2F9;
+  padding: 0 40px;
 }
 </style>
