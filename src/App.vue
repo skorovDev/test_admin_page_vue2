@@ -37,15 +37,8 @@ export default {
 </script>
 
 <style lang="scss">
-//div {
-//  border: 1px solid;
-//  //padding: 10px;
-//  background-color: rgba(0, 0, 0, 0.1);
-//}
-
 #app {
   max-width: 100%;
-  height: 100vw;
   max-height: 100%;
 }
 
