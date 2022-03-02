@@ -22,3 +22,5 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Awesome font [npm](https://www.npmjs.com/package/@fortawesome/vue-fontawesome#installation)

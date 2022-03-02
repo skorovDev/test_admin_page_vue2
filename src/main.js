@@ -9,13 +9,7 @@ import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
 import "./assets/css/main.css";
 
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {faUserFriends, faUserGroup} from '@fortawesome/free-solid-svg-icons'
-import {faBell} from '@fortawesome/free-regular-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-
-library.add(faUserFriends, faUserGroup, faBell)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+import './awesome-font'
 
 Vue.config.productionTip = false;
 
