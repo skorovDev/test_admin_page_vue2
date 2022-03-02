@@ -2,7 +2,9 @@
   <!--  <div>-->
   <a href="#">
     <div>
-      <font-awesome-icon icon="angellist" />    </div>
+      <font-awesome-icon icon="user-secret"/>
+      <font-awesome-icon icon="address-card"/>
+    </div>
     <div>Settings</div>
   </a>
   <!--  </div>-->
