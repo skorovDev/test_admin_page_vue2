@@ -9,11 +9,12 @@ import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
 import "./assets/css/main.css";
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faAddressCard } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faUserFriends, faUserGroup} from '@fortawesome/free-solid-svg-icons'
+import {faBell} from '@fortawesome/free-regular-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret, faAddressCard)
+library.add(faUserFriends, faUserGroup, faBell)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
@@ -21,6 +22,6 @@ Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
 
 new Vue({
-  store,
-  render: (h) => h(App)
+    store,
+    render: (h) => h(App)
 }).$mount("#app");

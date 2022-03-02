@@ -2,8 +2,7 @@
   <!--  <div>-->
   <a href="#">
     <div>
-      <font-awesome-icon icon="user-secret"/>
-      <font-awesome-icon icon="address-card"/>
+      <font-awesome-icon :icon="['far','bell']" flip="vertical"/>
     </div>
     <div>Settings</div>
   </a>
