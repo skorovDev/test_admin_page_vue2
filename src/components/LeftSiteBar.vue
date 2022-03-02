@@ -1,16 +1,16 @@
 <template>
-  <div class="left d-flex flex-column">
+  <div class="left-site-bar d-flex flex-column">
     <div class="top bg-hussle">hussle</div>
 
     <div class="d-flex flex-column justify-content-between flex-grow-1">
       <div class="top-menu">
-        <menu-item />
-        <menu-item />
-        <menu-item />
-        <menu-item />
-        <menu-item />
+        <menu-item/>
+        <menu-item/>
+        <menu-item/>
+        <menu-item/>
+        <menu-item/>
       </div>
-      <menu-item />
+      <menu-item/>
     </div>
   </div>
 </template>
@@ -20,8 +20,12 @@ import MenuItem from "@/components/MunuItem";
 
 export default {
   name: "LeftSiteBar",
-  components: { MenuItem },
+  components: {MenuItem},
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.left-site-bar {
+  flex: 0 1 200px;
+}
+</style>

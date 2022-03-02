@@ -1,21 +1,21 @@
 <template>
   <div id="app" class="d-flex">
-    <left-site-bar />
+    <left-site-bar/>
 
-    <div class="right flex-grow-1">
-      <v-header />
+    <div class="right ">
+      <v-header/>
 
-      <div class="d-flex flex-column h-100">
+      <div class="d-flex flex-column right-content">
         <div class="d-flex justify-content-between">
           <div>Studio Board</div>
           <div>icone</div>
         </div>
         <div class="bg-hussle content d-flex">
-          <board />
-          <board />
-          <board />
-          <board />
-          <board />
+          <board/>
+          <board/>
+          <board/>
+          <board/>
+          <!--          <board/>-->
         </div>
       </div>
     </div>
@@ -29,20 +29,21 @@ import Board from "@/components/Board";
 
 export default {
   name: "App",
-  components: { Board, VHeader, LeftSiteBar },
+  components: {Board, VHeader, LeftSiteBar},
 };
 </script>
 
 <style lang="scss">
 div {
   border: 1px solid;
-  padding: 10px;
+  //padding: 10px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 #app {
   max-width: 100%;
   height: 100vw;
+  max-height: 100%;
 }
 
 .h-100 {
@@ -58,7 +59,17 @@ div {
 
 .content {
   flex: 1 1 100%;
-  max-width: 1300px;
-  overflow: scroll;
+  overflow-x: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  max-width: calc(100% - 200px);
+}
+
+.right-content {
+  flex: 1 1 100%;
 }
 </style>
