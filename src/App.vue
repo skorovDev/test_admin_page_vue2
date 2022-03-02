@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="d-flex">
-    <left-site-bar/>
+    <left-site-bar />
 
-    <div class="right ">
-      <v-header/>
+    <div class="right">
+      <v-header />
 
       <div class="d-flex flex-column right-content">
         <div class="d-flex justify-content-between">
@@ -11,11 +11,7 @@
           <div>icone</div>
         </div>
         <div class="bg-hussle content d-flex">
-          <board/>
-          <board/>
-          <board/>
-          <board/>
-          <!--          <board/>-->
+          <board v-for="board in boards" :key="board.title" :title="board.title" />
         </div>
       </div>
     </div>
@@ -26,10 +22,17 @@
 import LeftSiteBar from "@/components/LeftSiteBar";
 import VHeader from "@/components/VHeader";
 import Board from "@/components/Board";
+import boards from "@/data/boards.json";
 
 export default {
   name: "App",
-  components: {Board, VHeader, LeftSiteBar},
+  components: { Board, VHeader, LeftSiteBar },
+  data: () => ({
+    boards
+  })
+  // beforeMount() {
+
+  // }
 };
 </script>
 
@@ -71,5 +74,6 @@ div {
 
 .right-content {
   flex: 1 1 100%;
+  max-height: calc(100% - 28px);
 }
 </style>
