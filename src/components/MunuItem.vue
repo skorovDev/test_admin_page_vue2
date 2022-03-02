@@ -1,17 +1,19 @@
 <template>
-  <!--  <div>-->
   <a href="#">
     <div>
-      <font-awesome-icon :icon="['far','bell']" flip="vertical"/>
+      <font-awesome-icon v-if="icon" :icon="icon" />
     </div>
-    <div>Settings</div>
+    <div>{{ label }}</div>
   </a>
-  <!--  </div>-->
 </template>
 
 <script>
 export default {
-  name: "MenuItem"
+  name: "MenuItem",
+  props: {
+    icon: {},
+    label: {}
+  }
 };
 </script>
 
