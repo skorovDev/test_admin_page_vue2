@@ -9,12 +9,12 @@ import {
   faSquarePollVertical,
   faGear,
   faMagnifyingGlass, faUserLarge,
-  faAngleDown
+  faAngleDown, faCirclePlus
 
 
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 
-library.add(faUserGroup, faServer, faCalendarDays, faSquarePollVertical, faGear, faMagnifyingGlass, faEnvelope, faBell, faUserLarge, faAngleDown);
+library.add(faUserGroup, faServer, faCalendarDays, faSquarePollVertical, faGear, faMagnifyingGlass, faEnvelope, faBell, faUserLarge, faAngleDown, faCirclePlus);
 Vue.component("font-awesome-icon", FontAwesomeIcon);

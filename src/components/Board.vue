@@ -1,11 +1,19 @@
 <template>
   <div class="board">
-    <div>{{ title }}</div>
+    <div class="border-gradient"></div>
+    <div class="board-title">{{ title }}</div>
     <div class="board-cards">
       <card v-for="(card,index) in cards" :key="index" :text="card.text" :users="card.users"
             :count-of-comments="card.countOfComments" :count-of-files="card.countOfFiles" :priority="card.priority" />
     </div>
-    <button>Add task +</button>
+    <div class="add-btn d-flex align-self-center">
+      <button>Add task
+
+        <font-awesome-icon icon="circle-plus" />
+
+      </button>
+    </div>
+
   </div>
 </template>
 
@@ -22,8 +30,35 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.add-btn {
+  margin: 20px;
+}
+
+.add-btn button {
+  border: none;
+  background: none;
+  color: #DADADA;
+
+  &:hover {
+    color: #32325D;
+  }
+}
+
+.board-title {
+  color: #707090;
+  font-size: 20px;
+  padding: 14px;
+}
+
+.border-gradient {
+  height: 10px;
+  background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
+
+}
+
 .board {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 280px;
