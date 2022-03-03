@@ -1,11 +1,10 @@
 <template>
-  <div class="left-site-bar d-flex flex-column">
-    <div class="top bg-header">hussle</div>
+  <div class="left-site-bar d-flex flex-column ">
+    <div class="left-site-bar-header">hussle</div>
 
-    <div class="d-flex flex-column justify-content-between flex-grow-1">
-      <div class="top-menu">
+    <div class="left-site-bar-menu-group ">
+      <div class="left-site-bar-menu-group-top">
         <menu-item v-for="(item,index) in menuItems " :key="index" :icon="item.icon" :label="item.label" />
-
       </div>
       <menu-item />
     </div>
@@ -21,7 +20,7 @@ export default {
   data: () => ({
     menuItems: [
       {
-        icon: ['fas',"user-group"],
+        icon: ["fas", "user-group"],
         label: "Manage"
       },
       {
@@ -41,21 +40,40 @@ export default {
 };
 </script>
 
-<style scoped>
-.top-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<style scoped lang="scss">
 
 .left-site-bar {
   flex: 0 1 120px;
 }
 
-.bg-header {
-  background: #8690DB;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.left {
+  &-site-bar-header {
+    background: #8690DB;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+  }
+
+  &-site-bar-menu-group {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+  }
+
 }
+
+
 </style>
