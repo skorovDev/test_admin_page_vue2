@@ -28,18 +28,18 @@ export default {
   flex-direction: column;
   text-align: center;
 
-  &:hover {
+  &:hover, &.active {
     color: #7A838F;
     text-decoration: none;
     border-left: 4px solid;
   }
 
-  &icon {
-
-  }
-
-  &-label {
-
-  }
+  //&icon {
+  //
+  //}
+  //
+  //&-label {
+  //
+  //}
 }
 </style>

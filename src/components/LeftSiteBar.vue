@@ -4,7 +4,8 @@
 
     <div class="left-site-bar-menu-group ">
       <div class="left-site-bar-menu-group-top">
-        <menu-item v-for="(item,index) in menuItems " :key="index" :icon="item.icon" :label="item.label" />
+        <menu-item v-for="(item,index) in menuItems " :key="index" :icon="item.icon" :label="item.label"
+                   :class="{active: item.active}" />
       </div>
       <menu-item icon="gear" label="Settings" />
     </div>
@@ -24,6 +25,7 @@ export default {
         label: "Manage"
       },
       {
+        active: true,
         icon: "server",
         label: "Boards"
       },
@@ -54,7 +56,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 30px;
+    padding: 15px 30px;
+    min-height: 60px;
+    max-height: 60px;
   }
 
   &-site-bar-menu-group {
@@ -62,6 +66,7 @@ export default {
     justify-content: space-between;
     flex-grow: 1;
     flex-direction: column;
+
     &-top {
 
     }

@@ -42,10 +42,6 @@ export default {
   max-height: 100%;
 }
 
-.bg-hussle {
-  background: linear-gradient(90deg, #9ea7fc 0%, #65b6f7 124.87%);
-}
-
 .right-content-header {
   padding: 35px 0;
 }
