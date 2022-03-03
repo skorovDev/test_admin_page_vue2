@@ -10,7 +10,19 @@
       </div>
     </div>
 
-    <div>M. Thompson</div>
+    <div class="header-item ">
+      <div class="header-item-envelope">
+        <font-awesome-icon :icon="['far','envelope']" />
+      </div>
+      <div class="header-item-bell">
+        <font-awesome-icon :icon="['far','bell']" />
+      </div>
+      <div class="header-item-name"> M. Thompson</div>
+      <div class="header-item-user">
+        <font-awesome-icon icon="user-large" />
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -68,6 +80,38 @@ export default {
 
       input:focus + .header-search-input-border {
         width: 100%;
+      }
+    }
+  }
+
+  .header-item {
+    display: flex;
+
+    &-envelope {
+      margin: 0 20px;
+    }
+
+    &-bell {
+      margin: 0 20px;
+
+    }
+
+    &-name {
+      margin: 0 20px;
+
+    }
+
+    &-user {
+      text-align: center;
+      padding-top: 2px;
+      margin: 0 20px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50px;
+      background: #D8D8E4;
+
+      :hover {
+        cursor: pointer;
       }
     }
   }
