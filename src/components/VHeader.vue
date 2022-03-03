@@ -14,10 +14,10 @@
       <div class="header-item-envelope">
         <font-awesome-icon :icon="['far','envelope']" />
       </div>
-      <div class="header-item-bell">
+      <div class="header-item-bell border-left-header">
         <font-awesome-icon :icon="['far','bell']" />
       </div>
-      <div class="header-item-name"> M. Thompson</div>
+      <div class="header-item-name border-left-header"> M. Thompson</div>
       <div class="header-item-user">
         <font-awesome-icon icon="user-large" />
       </div>
@@ -33,25 +33,35 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.border-left-header {
+  border-left: 1px solid #ffffff;
+  padding: 20px;
+}
+
 .right-site-header {
   color: #FFFFFF;
-  padding: 15px;
   min-height: 60px;
   max-height: 60px;
   background: linear-gradient(90deg, #9ea7fc 0%, #65b6f7 124.87%);
 
   .header-search {
     display: flex;
+    align-self: center;
+    max-height: 100%;
 
     &-icon {
-      display: flex;
-      align-self: center;
-      margin-right: 10px;
+      margin: 0 10px 0 20px;
     }
 
     &-input {
+
+
+      display: flex;
+      align-items: center;
       position: relative;
       color: #FFFFFF;
+
 
       .header-search-input-border {
         position: absolute;
@@ -86,31 +96,30 @@ export default {
 
   .header-item {
     display: flex;
+    align-items: center;
 
     &-envelope {
       margin: 0 20px;
     }
 
-    &-bell {
-      margin: 0 20px;
+    //&-bell {
+    //
+    //}
 
-    }
-
-    &-name {
-      margin: 0 20px;
-
-    }
+    //&-name {
+    //
+    //}
 
     &-user {
       text-align: center;
       padding-top: 2px;
-      margin: 0 20px;
+      margin: 0 40px 0 20px;
       height: 30px;
       width: 30px;
-      border-radius: 50px;
+      border-radius: 50%;
       background: #D8D8E4;
 
-      :hover {
+      &:hover {
         cursor: pointer;
       }
     }

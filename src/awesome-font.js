@@ -8,12 +8,13 @@ import {
   faCalendarDays,
   faSquarePollVertical,
   faGear,
-  faMagnifyingGlass,faUserLarge
+  faMagnifyingGlass, faUserLarge,
+  faAngleDown
 
 
 } from "@fortawesome/free-solid-svg-icons";
-import { faBell,faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faBell, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 
-library.add(faUserGroup, faServer, faCalendarDays, faSquarePollVertical, faGear, faMagnifyingGlass, faEnvelope,faBell,faUserLarge );
+library.add(faUserGroup, faServer, faCalendarDays, faSquarePollVertical, faGear, faMagnifyingGlass, faEnvelope, faBell, faUserLarge, faAngleDown);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
