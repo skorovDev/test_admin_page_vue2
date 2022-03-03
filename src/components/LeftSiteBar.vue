@@ -6,7 +6,7 @@
       <div class="left-site-bar-menu-group-top">
         <menu-item v-for="(item,index) in menuItems " :key="index" :icon="item.icon" :label="item.label" />
       </div>
-      <menu-item />
+      <menu-item icon="gear" label="Settings" />
     </div>
   </div>
 </template>
@@ -62,13 +62,8 @@ export default {
     justify-content: space-between;
     flex-grow: 1;
     flex-direction: column;
-    align-items: center;
-
     &-top {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      margin-top: 30px;
+
     }
 
   }

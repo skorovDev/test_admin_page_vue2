@@ -20,10 +20,13 @@ export default {
 <style scoped lang="scss">
 
 .menu-item {
-  padding: 5px 0;
+  padding: 27px 0;
   color: #DADADA;
   min-width: 120px;
   border-left: 4px solid #DADADA;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
   &:hover {
     color: #7A838F;
@@ -36,8 +39,7 @@ export default {
   }
 
   &-label {
-    margin-top: 10px;
-    margin-bottom: 55px
+
   }
 }
 </style>
