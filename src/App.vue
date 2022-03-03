@@ -61,7 +61,7 @@ export default {
 
 .right-content {
   flex: 1 1 100%;
-  max-height: calc(100% - 28px);
+  max-height: calc(100% - 60px);
   background: #EEF2F9;
   padding: 0 40px;
 }
