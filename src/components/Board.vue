@@ -50,6 +50,8 @@ export default {
 }
 
 .add-btn button {
+  border-radius: 20px;
+  padding: 5px 30px;
   border: none;
   background: none;
   color: #dadada;

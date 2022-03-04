@@ -16,18 +16,18 @@
             </div>
           </div>
           <div class="d-flex">
-            <div class="user">
+            <button class="user">
               <font-awesome-icon icon="user-large" />
-            </div>
-            <div class="user">
+            </button>
+            <button class="user">
               <font-awesome-icon icon="user-large" />
-            </div>
-            <div class="user">
+            </button>
+            <button class="user">
               <font-awesome-icon icon="user-large" />
-            </div>
-            <div class="user">
+            </button>
+            <button class="user">
               <font-awesome-icon icon="user-large" />
-            </div>
+            </button>
             <button class="plus">+</button>
           </div>
         </div>
@@ -82,7 +82,6 @@ export default {
 
 .user {
   margin-right: 10px;
-
   color: #ffffff;
   text-align: center;
   padding-top: 2px;
@@ -90,6 +89,7 @@ export default {
   width: 30px;
   border-radius: 50%;
   background: #d8d8e4;
+  border: none;
 
   &:hover {
     cursor: pointer;
