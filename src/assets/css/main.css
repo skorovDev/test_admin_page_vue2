@@ -8,3 +8,12 @@ html, body {
     max-width: 100vw;
     max-height: 100vh;
 }
+
+button {
+    transition: 0.5s;
+}
+
+button:hover {
+    box-shadow: 0 4px 5px #999;
+    transform: translateY(-2px);
+}

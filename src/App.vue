@@ -28,7 +28,7 @@
             <div class="user">
               <font-awesome-icon icon="user-large" />
             </div>
-            <div class="plus">+</div>
+            <button class="plus">+</button>
           </div>
         </div>
         <div class="content d-flex">

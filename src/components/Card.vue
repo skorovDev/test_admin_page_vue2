@@ -20,17 +20,17 @@
         </div>
       </div>
       <div class="card-footer-users d-flex align-items-center">
-        <div class="plus">+</div>
+        <button class="plus">+</button>
 
         <div class="users d-flex">
-          <div
+          <button
             class="user"
             v-for="(user, index) in shortUserList"
             :key="index"
             :style="userZIndex(index)"
           >
             <font-awesome-icon icon="user-large" />
-          </div>
+          </button>
         </div>
         <div class="counts-user" v-if="countOverShortUserList">
           + {{ countOverShortUserList }}
@@ -88,8 +88,13 @@ export default {
 
 <style scoped lang="scss">
 .card {
-  margin-right: 10px;
   padding: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   .card-text {
     margin-top: 10px;
@@ -101,59 +106,59 @@ export default {
     margin-left: 10px;
   }
 
-  background: #ffffff;
-  border-radius: 5px;
-  margin-top: 10px;
-
   .card-priority {
     &-label {
       color: #ffffff;
       padding: 5px;
       border-radius: 5px;
-    }
-  }
-
-  .user {
-    color: #ffffff;
-    text-align: center;
-    padding-top: 2px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #d8d8e4;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:last-child {
-      margin-right: 0 !important;
-    }
-  }
-
-  .plus {
-    margin-right: 10px;
-    color: #9898ae;
-    display: flex;
-    line-height: 16px;
-    font-size: 16px;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed #9898ae;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-
-    &:hover {
-      cursor: pointer;
+      display: inline-block;
     }
   }
 
   .card-footer {
+    color: #ccccd7;
+
     &-addition-message {
       margin-right: 10px;
     }
-    color: #ccccd7;
+
+    .user {
+      color: #ffffff;
+      text-align: center;
+      padding-top: 2px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background: #d8d8e4;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+
+    .plus {
+      margin-right: 10px;
+      color: #9898ae;
+      display: flex;
+      line-height: 16px;
+      font-size: 16px;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #9898ae;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      background: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 

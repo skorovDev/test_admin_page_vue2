@@ -83,6 +83,7 @@ export default {
 .board-cards {
   flex-grow: 1;
   overflow-y: scroll;
+  padding-right: 10px;
 }
 .border-gradient {
   height: 5px;
