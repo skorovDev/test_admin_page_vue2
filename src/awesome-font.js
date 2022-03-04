@@ -12,6 +12,8 @@ import {
   faUserLarge,
   faAngleDown,
   faCirclePlus,
+  faMessage,
+  faPaperclip,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -26,6 +28,8 @@ library.add(
   faBell,
   faUserLarge,
   faAngleDown,
-  faCirclePlus
+  faCirclePlus,
+  faMessage,
+  faPaperclip
 );
 Vue.component("font-awesome-icon", FontAwesomeIcon);

@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <div :class="`border-gradient-${status}`"></div>
+    <div :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
     <div class="board-cards">
       <card
@@ -28,10 +28,18 @@ import Card from "@/components/Card";
 export default {
   name: "Board",
   components: { Card },
+  data: () => ({
+    statuses: { 1: "backlog", 2: "in_progress", 3: "review", 4: "complete" },
+  }),
   props: {
     title: {},
     cards: {},
     status: {},
+  },
+  computed: {
+    statusClass() {
+      return `border-gradient-${this.statuses[this.status]}`;
+    },
   },
 };
 </script>
@@ -75,7 +83,7 @@ export default {
   overflow-y: scroll;
 }
 
-.border-gradient-1 {
+.border-gradient-backlog {
   height: 10px;
   background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
 }
@@ -87,7 +95,7 @@ export default {
 
 .border-gradient-review {
   height: 10px;
-  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
+  background: linear-gradient(134.34deg, #9ea7fc 0%, #65b6f7 114.98%);
 }
 
 .border-gradient-complete {
