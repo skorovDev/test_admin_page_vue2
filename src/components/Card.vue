@@ -97,11 +97,7 @@ export default {
     }
   }
 
-  .users {
-  }
-
   .user {
-    //margin-top: 10px;
     color: #ffffff;
     text-align: center;
     padding-top: 2px;
@@ -120,8 +116,6 @@ export default {
   }
 
   .plus {
-    //margin-top: 10px;
-    //margin-right: 30px;
     color: #9898ae;
     display: flex;
     line-height: 16px;
