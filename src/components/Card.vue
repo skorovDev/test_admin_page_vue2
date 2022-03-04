@@ -19,19 +19,28 @@
           {{ countOfFiles }}
         </div>
       </div>
-      <div class="card-footer-users">
-        <div class="d-flex">
-          <div class="plus">+</div>
-          <div class="user" v-for="(user, index) in users" :key="index">
+      <div class="card-footer-users d-flex">
+        <div class="plus">+</div>
+
+        <div class="users d-flex">
+          <div
+            class="user"
+            v-for="(user, index) in shortUserList"
+            :key="index"
+            :style="userZIndex(index)"
+          >
             <font-awesome-icon icon="user-large" />
           </div>
         </div>
+        <div v-if="countOverShortUserList">+ {{ countOverShortUserList }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+const baseMarginRight = 15;
+
 export default {
   name: "Card",
   props: {
@@ -51,6 +60,26 @@ export default {
     priorityClass() {
       return this.priorityLabel.replace(" ", "-").toLowerCase();
     },
+    shortUserList() {
+      return this.users.slice(0, 4);
+    },
+    countOverShortUserList() {
+      const count = this.users.length - 4;
+      return count > 0 ? count : false;
+    },
+  },
+  methods: {
+    userZIndex(index) {
+      const marginRight =
+        this.users.length <= 4
+          ? `-${baseMarginRight}px`
+          : `-${baseMarginRight + ((this.shortUserList.length - 4) / 2) * 3}px`;
+
+      return {
+        zIndex: this.users.length - index,
+        marginRight,
+      };
+    },
   },
 };
 </script>
@@ -68,9 +97,11 @@ export default {
     }
   }
 
+  .users {
+  }
+
   .user {
-    margin-left: -28px;
-    margin-top: 10px;
+    //margin-top: 10px;
     color: #ffffff;
     text-align: center;
     padding-top: 2px;
@@ -82,11 +113,15 @@ export default {
     &:hover {
       cursor: pointer;
     }
+
+    &:last-child {
+      margin-right: 0 !important;
+    }
   }
 
   .plus {
-    margin-top: 10px;
-    margin-right: 30px;
+    //margin-top: 10px;
+    //margin-right: 30px;
     color: #9898ae;
     display: flex;
     line-height: 16px;
