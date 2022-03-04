@@ -9,17 +9,17 @@
       {{ text }}
     </div>
     <div class="card-footer d-flex justify-content-between align-items-center">
-      <div class="card-footer-addition d-flex">
-        <div class="card-footer-addition-paperclip">
-          <font-awesome-icon icon="paperclip" />
-          {{ countOfComments }}
-        </div>
+      <div class="card-footer-addition d-flex align-items-center">
         <div class="card-footer-addition-message">
           <font-awesome-icon icon="message" />
           {{ countOfFiles }}
         </div>
+        <div class="card-footer-addition-paperclip">
+          <font-awesome-icon icon="paperclip" />
+          {{ countOfComments }}
+        </div>
       </div>
-      <div class="card-footer-users d-flex">
+      <div class="card-footer-users d-flex align-items-center">
         <div class="plus">+</div>
 
         <div class="users d-flex">
@@ -32,7 +32,9 @@
             <font-awesome-icon icon="user-large" />
           </div>
         </div>
-        <div v-if="countOverShortUserList">+ {{ countOverShortUserList }}</div>
+        <div class="counts-user" v-if="countOverShortUserList">
+          + {{ countOverShortUserList }}
+        </div>
       </div>
     </div>
   </div>
@@ -86,12 +88,26 @@ export default {
 
 <style scoped lang="scss">
 .card {
+  margin-right: 10px;
+  padding: 10px;
+
+  .card-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .counts-user {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
   background: #ffffff;
   border-radius: 5px;
-  margin: 10px;
+  margin-top: 10px;
 
   .card-priority {
     &-label {
+      color: #ffffff;
       padding: 5px;
       border-radius: 5px;
     }
@@ -116,6 +132,7 @@ export default {
   }
 
   .plus {
+    margin-right: 10px;
     color: #9898ae;
     display: flex;
     line-height: 16px;
@@ -133,17 +150,10 @@ export default {
   }
 
   .card-footer {
-    &-addition {
-      &-paperclip {
-        margin: 10px;
-      }
-
-      &-message {
-        margin: 10px;
-      }
-
-      color: #ccccd7;
+    &-addition-message {
+      margin-right: 10px;
     }
+    color: #ccccd7;
   }
 }
 

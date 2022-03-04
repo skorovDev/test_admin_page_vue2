@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <div :class="statusClass"></div>
+    <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
     <div class="board-cards">
       <card
@@ -66,6 +66,8 @@ export default {
 }
 
 .board {
+  position: relative;
+  padding-left: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -82,24 +84,27 @@ export default {
   flex-grow: 1;
   overflow-y: scroll;
 }
+.border-gradient {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .border-gradient-backlog {
-  height: 10px;
   background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
 }
 
 .border-gradient-in_progress {
-  height: 10px;
   background: linear-gradient(135deg, #ff9784 0%, #ffb74d 100%);
 }
 
 .border-gradient-review {
-  height: 10px;
   background: linear-gradient(134.34deg, #9ea7fc 0%, #65b6f7 114.98%);
 }
 
 .border-gradient-complete {
-  height: 10px;
   background: linear-gradient(315.14deg, #81d5ee 0%, #7ed492 133.97%);
 }
 </style>
