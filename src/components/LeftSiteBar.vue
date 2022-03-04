@@ -1,11 +1,16 @@
 <template>
-  <div class="left-site-bar d-flex flex-column ">
+  <div class="left-site-bar d-flex flex-column">
     <div class="left-site-bar-header">hussle</div>
 
-    <div class="left-site-bar-menu-group ">
+    <div class="left-site-bar-menu-group">
       <div class="left-site-bar-menu-group-top">
-        <menu-item v-for="(item,index) in menuItems " :key="index" :icon="item.icon" :label="item.label"
-                   :class="{active: item.active}" />
+        <menu-item
+          v-for="(item, index) in menuItems"
+          :key="index"
+          :icon="item.icon"
+          :label="item.label"
+          :class="{ active: item.active }"
+        />
       </div>
       <menu-item icon="gear" label="Settings" />
     </div>
@@ -22,37 +27,36 @@ export default {
     menuItems: [
       {
         icon: ["fas", "user-group"],
-        label: "Manage"
+        label: "Manage",
       },
       {
         active: true,
         icon: "server",
-        label: "Boards"
+        label: "Boards",
       },
       {
         icon: "calendar-days",
-        label: "Schedule"
+        label: "Schedule",
       },
       {
         icon: "square-poll-vertical",
-        label: "Reports"
-      }
-    ]
-  })
+        label: "Reports",
+      },
+    ],
+  }),
 };
 </script>
 
 <style scoped lang="scss">
-
 .left-site-bar {
   flex: 0 1 120px;
 }
 
 .left {
   &-site-bar-header {
-    background: #8690DB;
+    background: #8690db;
     font-size: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,12 +72,7 @@ export default {
     flex-direction: column;
 
     &-top {
-
     }
-
   }
-
 }
-
-
 </style>

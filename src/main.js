@@ -9,13 +9,13 @@ import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
 import "./assets/css/main.css";
 
-import './awesome-font'
+import "./awesome-font";
 
 Vue.config.productionTip = false;
 
 Vue.use(VueAxios, axios);
 
 new Vue({
-    store,
-    render: (h) => h(App)
+  store,
+  render: (h) => h(App),
 }).$mount("#app");

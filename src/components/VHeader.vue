@@ -5,42 +5,40 @@
         <font-awesome-icon icon="magnifying-glass" />
       </div>
       <div class="header-search-input">
-        <input placeholder="Search for tasks…" type="text" name="" id="">
+        <input placeholder="Search for tasks…" type="text" name="" id="" />
         <span class="header-search-input-border"></span>
       </div>
     </div>
 
-    <div class="header-item ">
+    <div class="header-item">
       <div class="header-item-envelope">
-        <font-awesome-icon :icon="['far','envelope']" />
+        <font-awesome-icon :icon="['far', 'envelope']" />
       </div>
       <div class="header-item-bell border-left-header">
-        <font-awesome-icon :icon="['far','bell']" />
+        <font-awesome-icon :icon="['far', 'bell']" />
       </div>
-      <div class="header-item-name border-left-header"> M. Thompson</div>
+      <div class="header-item-name border-left-header">M. Thompson</div>
       <div class="header-item-user">
         <font-awesome-icon icon="user-large" />
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "VHeader"
+  name: "VHeader",
 };
 </script>
 
 <style scoped lang="scss">
-
 .border-left-header {
   border-left: 1px solid #ffffff;
   padding: 20px;
 }
 
 .right-site-header {
-  color: #FFFFFF;
+  color: #ffffff;
   min-height: 60px;
   max-height: 60px;
   background: linear-gradient(90deg, #9ea7fc 0%, #65b6f7 124.87%);
@@ -55,13 +53,10 @@ export default {
     }
 
     &-input {
-
-
       display: flex;
       align-items: center;
       position: relative;
-      color: #FFFFFF;
-
+      color: #ffffff;
 
       .header-search-input-border {
         position: absolute;
@@ -80,7 +75,7 @@ export default {
         color: currentColor;
 
         &::placeholder {
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         &:focus {
@@ -117,7 +112,7 @@ export default {
       height: 30px;
       width: 30px;
       border-radius: 50%;
-      background: #D8D8E4;
+      background: #d8d8e4;
 
       &:hover {
         cursor: pointer;
@@ -125,6 +120,4 @@ export default {
     }
   }
 }
-
-
 </style>

@@ -1,19 +1,25 @@
 <template>
   <div class="board">
-    <div :class="border-gradient"></div>
+    <div :class="border - gradient"></div>
     <div class="board-title">{{ title }}</div>
     <div class="board-cards">
-      <card v-for="(card,index) in cards" :key="index" :text="card.text" :users="card.users"
-            :count-of-comments="card.countOfComments" :count-of-files="card.countOfFiles" :priority="card.priority" />
+      <card
+        v-for="(card, index) in cards"
+        :key="index"
+        :text="card.text"
+        :users="card.users"
+        :count-of-comments="card.countOfComments"
+        :count-of-files="card.countOfFiles"
+        :priority="card.priority"
+      />
     </div>
     <div class="add-btn d-flex align-self-center">
-      <button>Add task
+      <button>
+        Add task
 
         <font-awesome-icon icon="circle-plus" />
-
       </button>
     </div>
-
   </div>
 </template>
 
@@ -25,8 +31,8 @@ export default {
   components: { Card },
   props: {
     title: {},
-    cards: {}
-  }
+    cards: {},
+  },
 };
 </script>
 
@@ -38,10 +44,10 @@ export default {
 .add-btn button {
   border: none;
   background: none;
-  color: #DADADA;
+  color: #dadada;
 
   &:hover {
-    color: #32325D;
+    color: #32325d;
   }
 }
 
@@ -53,27 +59,23 @@ export default {
 
 .border-gradient-backlog {
   height: 10px;
-  background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
-
+  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
 }
 
 .border-gradient-in-Progress {
   height: 10px;
-  background: linear-gradient(135deg, #FF9784 0%, #FFB74D 100%);
-
+  background: linear-gradient(135deg, #ff9784 0%, #ffb74d 100%);
 }
 
 .border-gradient-review {
   height: 10px;
-  background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
-
+  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
 }
 
 .border-gradient-complete {
   height: 10px;
-  background: linear-gradient(315.14deg, #81D5EE 0%, #7ED492 133.97%);
+  background: linear-gradient(315.14deg, #81d5ee 0%, #7ed492 133.97%);
 }
-
 
 .board {
   overflow: hidden;
@@ -84,7 +86,7 @@ export default {
   max-height: 100%;
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 10px #D2D7E0;
+  box-shadow: 0 0 10px #d2d7e0;
   border-radius: 5px;
 }
 

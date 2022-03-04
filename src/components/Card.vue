@@ -6,7 +6,7 @@
     <div class="card-text">
       {{ text }}
     </div>
-    <div class="card-footer ">
+    <div class="card-footer">
       <div class="card-footer-addition">
         <div>comments:{{ countOfComments }}</div>
         <div>files:{{ countOfFiles }}</div>
@@ -14,7 +14,9 @@
       <div class="card-footer-users">
         <div>+</div>
         <div>
-          <div v-for="(user, index) in users" :key="index"><img src="#" alt=""></div>
+          <div v-for="(user, index) in users" :key="index">
+            <img src="#" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -22,7 +24,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Card",
   props: {
@@ -30,12 +31,10 @@ export default {
     users: {},
     countOfComments: {},
     countOfFiles: {},
-    priority: {}
+    priority: {},
   },
   data: () => ({
-    priorityText: ["Low Priority", "Med Priority", "High Priority"]
-
-
+    priorityText: ["Low Priority", "Med Priority", "High Priority"],
   }),
   computed: {
     priorityLabel() {
@@ -43,26 +42,26 @@ export default {
     },
     priorityClass() {
       return this.priorityLabel.replace(" ", "-").toLowerCase();
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.card{
-  background: #FFFFFF;
+.card {
+  background: #ffffff;
   border-radius: 5px;
   margin: 10px;
 }
 .low-priority {
-  background: linear-gradient(134.34deg, #9EA7FC 0%, #65B6F7 114.98%);
+  background: linear-gradient(134.34deg, #9ea7fc 0%, #65b6f7 114.98%);
 }
 
 .med-priority {
-  background: linear-gradient(315.14deg, #81D5EE 0%, #7ED492 133.97%);
+  background: linear-gradient(315.14deg, #81d5ee 0%, #7ed492 133.97%);
 }
 
 .high-priority {
-  background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
+  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
 }
 </style>

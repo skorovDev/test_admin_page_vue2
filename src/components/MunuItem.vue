@@ -12,24 +12,24 @@ export default {
   name: "MenuItem",
   props: {
     icon: {},
-    label: {}
-  }
+    label: {},
+  },
 };
 </script>
 
 <style scoped lang="scss">
-
 .menu-item {
   padding: 27px 0;
-  color: #DADADA;
+  color: #dadada;
   min-width: 120px;
-  border-left: 4px solid #DADADA;
+  border-left: 4px solid #dadada;
   display: flex;
   flex-direction: column;
   text-align: center;
 
-  &:hover, &.active {
-    color: #7A838F;
+  &:hover,
+  &.active {
+    color: #7a838f;
     text-decoration: none;
     border-left: 4px solid;
   }
