@@ -7,7 +7,7 @@ import VueAxios from "vue-axios";
 
 import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
-import "./assets/css/main.css";
+import "./assets/css/main.scss";
 
 import "./awesome-font";
 

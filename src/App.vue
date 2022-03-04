@@ -3,7 +3,7 @@
     <left-site-bar />
 
     <div class="right">
-      <v-header />
+      <v-header @change-search-text="filterTasks" />
 
       <div class="d-flex flex-column right-content">
         <div class="right-content-header d-flex justify-content-between">
@@ -32,7 +32,11 @@
           </div>
         </div>
         <div class="content d-flex">
-          <board v-for="(board, index) in boards" :key="index" v-bind="board" />
+          <board
+            v-for="(board, index) in filteredBoards"
+            :key="index"
+            v-bind="board"
+          />
         </div>
       </div>
     </div>
@@ -49,8 +53,26 @@ export default {
   name: "App",
   components: { Board, VHeader, LeftSiteBar },
   data: () => ({
+    filterText: "",
     boards,
   }),
+  computed: {
+    filteredBoards() {
+      return this.boards.map((board) => {
+        const newBoard = { ...board };
+        newBoard.cards = board.cards.filter((card) =>
+          card.text.includes(this.filterText)
+        );
+        return newBoard;
+      });
+    },
+  },
+  methods: {
+    filterTasks(text) {
+      this.filterText = text;
+    },
+  },
+
   // beforeMount() {
 
   // }

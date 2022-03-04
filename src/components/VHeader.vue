@@ -5,7 +5,11 @@
         <font-awesome-icon icon="magnifying-glass" />
       </div>
       <div class="header-search-input">
-        <input placeholder="Search for tasks…" type="text" name="" id="" />
+        <input
+          @input="changeSearchText"
+          placeholder="Search for tasks…"
+          type="text"
+        />
         <span class="header-search-input-border"></span>
       </div>
     </div>
@@ -28,6 +32,11 @@
 <script>
 export default {
   name: "VHeader",
+  methods: {
+    changeSearchText(event) {
+      this.$emit("change-search-text", event.target.value);
+    },
+  },
 };
 </script>
 

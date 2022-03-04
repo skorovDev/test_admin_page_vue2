@@ -2,7 +2,7 @@
   <div class="board">
     <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
-    <div class="board-cards">
+    <transition-group name="list" tag="div" class="board-cards">
       <card
         v-for="(card, index) in cards"
         :key="index"
@@ -12,7 +12,7 @@
         :count-of-files="card.countOfFiles"
         :priority="card.priority"
       />
-    </div>
+    </transition-group>
     <div class="add-btn d-flex align-self-center">
       <button>
         Add task
@@ -87,12 +87,28 @@ export default {
   overflow-y: scroll;
   padding-right: 10px;
 }
+
 .border-gradient {
   height: 5px;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .border-gradient-backlog {

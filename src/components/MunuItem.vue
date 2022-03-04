@@ -32,6 +32,9 @@ export default {
     color: #7a838f;
     text-decoration: none;
     border-left: 4px solid;
+    box-shadow: 0 4px 5px #999;
+    transform: translateY(-2px);
+    transition: 0.5s;
   }
 
   //&icon {
