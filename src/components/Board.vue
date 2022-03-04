@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <div :class="border - gradient"></div>
+    <div :class="`border-gradient-${status}`"></div>
     <div class="board-title">{{ title }}</div>
     <div class="board-cards">
       <card
@@ -16,7 +16,6 @@
     <div class="add-btn d-flex align-self-center">
       <button>
         Add task
-
         <font-awesome-icon icon="circle-plus" />
       </button>
     </div>
@@ -32,6 +31,7 @@ export default {
   props: {
     title: {},
     cards: {},
+    status: {},
   },
 };
 </script>
@@ -57,26 +57,6 @@ export default {
   padding: 14px;
 }
 
-.border-gradient-backlog {
-  height: 10px;
-  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
-}
-
-.border-gradient-in-Progress {
-  height: 10px;
-  background: linear-gradient(135deg, #ff9784 0%, #ffb74d 100%);
-}
-
-.border-gradient-review {
-  height: 10px;
-  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
-}
-
-.border-gradient-complete {
-  height: 10px;
-  background: linear-gradient(315.14deg, #81d5ee 0%, #7ed492 133.97%);
-}
-
 .board {
   overflow: hidden;
   display: flex;
@@ -93,5 +73,25 @@ export default {
 .board-cards {
   flex-grow: 1;
   overflow-y: scroll;
+}
+
+.border-gradient-1 {
+  height: 10px;
+  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
+}
+
+.border-gradient-in_progress {
+  height: 10px;
+  background: linear-gradient(135deg, #ff9784 0%, #ffb74d 100%);
+}
+
+.border-gradient-review {
+  height: 10px;
+  background: linear-gradient(133.98deg, #c781ff -18.23%, #e57373 125.36%);
+}
+
+.border-gradient-complete {
+  height: 10px;
+  background: linear-gradient(315.14deg, #81d5ee 0%, #7ed492 133.97%);
 }
 </style>

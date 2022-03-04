@@ -32,12 +32,7 @@
           </div>
         </div>
         <div class="content d-flex">
-          <board
-            v-for="(board, index) in boards"
-            :key="index"
-            :title="board.title"
-            :cards="board.cards"
-          />
+          <board v-for="(board, index) in boards" :key="index" v-bind="board" />
         </div>
       </div>
     </div>
