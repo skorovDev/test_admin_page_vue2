@@ -1,6 +1,6 @@
 <template>
   <div class="board">
-    <div class="border-gradient"></div>
+    <div :class="border-gradient"></div>
     <div class="board-title">{{ title }}</div>
     <div class="board-cards">
       <card v-for="(card,index) in cards" :key="index" :text="card.text" :users="card.users"
@@ -51,11 +51,29 @@ export default {
   padding: 14px;
 }
 
-.border-gradient {
+.border-gradient-backlog {
   height: 10px;
   background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
 
 }
+
+.border-gradient-in-Progress {
+  height: 10px;
+  background: linear-gradient(135deg, #FF9784 0%, #FFB74D 100%);
+
+}
+
+.border-gradient-review {
+  height: 10px;
+  background: linear-gradient(133.98deg, #C781FF -18.23%, #E57373 125.36%);
+
+}
+
+.border-gradient-complete {
+  height: 10px;
+  background: linear-gradient(315.14deg, #81D5EE 0%, #7ED492 133.97%);
+}
+
 
 .board {
   overflow: hidden;
