@@ -25,9 +25,6 @@
             <button class="user">
               <font-awesome-icon icon="user-large" />
             </button>
-            <button class="user">
-              <font-awesome-icon icon="user-large" />
-            </button>
             <button class="plus">+</button>
           </div>
         </div>
@@ -99,18 +96,6 @@ export default {
 
 .user {
   margin-right: 10px;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 2px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #d8d8e4;
-  border: none;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .btn-arrow {

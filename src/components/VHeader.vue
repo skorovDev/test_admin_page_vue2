@@ -149,6 +149,7 @@ export default {
       width: 30px;
       border-radius: 50%;
       background: #d8d8e4;
+
       svg {
         padding: 0 7px;
       }

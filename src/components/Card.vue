@@ -122,28 +122,6 @@ export default {
       margin-right: 10px;
     }
 
-    .user {
-      color: #ffffff;
-      padding: 0;
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-      background: #d8d8e4;
-      border: none;
-
-      svg {
-        padding: 0 7px;
-      }
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &:last-child {
-        margin-right: 0 !important;
-      }
-    }
-
     .plus {
       margin-right: 10px;
       color: #9898ae;

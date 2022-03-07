@@ -4,6 +4,7 @@ import "./registerServiceWorker";
 import store from "./store";
 import axios from "axios";
 import VueAxios from "vue-axios";
+// import draggable from "vuedraggable";
 
 import "bootstrap/scss/bootstrap-reboot.scss";
 import "bootstrap/scss/bootstrap-grid.scss";
