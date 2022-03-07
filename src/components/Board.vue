@@ -3,17 +3,17 @@
     <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
     <draggable :list="cards" group="people" @add="add" @remove="remove">
-      <!--      <transition-group name="list" tag="div" class="board-cards">-->
-      <card
-        v-for="(card, index) in cards"
-        :key="index"
-        :text="card.text"
-        :users="card.users"
-        :count-of-comments="card.countOfComments"
-        :count-of-files="card.countOfFiles"
-        :priority="card.priority"
-      />
-      <!--      </transition-group>-->
+      <transition-group name="list" tag="div" class="board-cards">
+        <card
+          v-for="(card, index) in cards"
+          :key="index"
+          :text="card.text"
+          :users="card.users"
+          :count-of-comments="card.countOfComments"
+          :count-of-files="card.countOfFiles"
+          :priority="card.priority"
+        />
+      </transition-group>
     </draggable>
     <div class="add-btn d-flex align-self-center">
       <button>
@@ -48,13 +48,14 @@ export default {
     getCardByIndex(index) {
       return this.cards[index];
     },
-    add(data) {
-      this.getCardByIndex(data.oldIndex);
-      this.$emit("add-card", data);
+    add({ oldIndex, newIndex }) {
+      // console.log("add", this.title);
+      const card = this.getCardByIndex(oldIndex);
+      this.$emit("add-card", { card, newIndex });
     },
-    remove(data) {
-      this.getCardByIndex(data.oldIndex);
-      this.$emit("remove-card", data);
+    remove({ oldIndex }) {
+      // console.log("remove", this.title);
+      this.$emit("remove-card", oldIndex);
     },
     clone(el) {
       return {

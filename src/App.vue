@@ -70,11 +70,14 @@ export default {
     filterTasks(text) {
       this.filterText = text;
     },
-    addCard(bordIndex, data) {
-      console.log(data);
+    addCard(bordIndex, { card, newIndex }) {
+      console.log(card, card.text);
+      const board = this.boards[bordIndex];
+      board.cards.splice(newIndex, 0, card);
     },
-    removeCard(bordIndex, data) {
-      console.log(data);
+    removeCard(bordIndex, cardIndex) {
+      const board = this.boards[bordIndex];
+      board.cards.splice(cardIndex, 1);
     },
   },
 
