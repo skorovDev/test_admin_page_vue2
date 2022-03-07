@@ -78,7 +78,7 @@ export default {
   max-height: 100%;
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 10px #d2d7e0;
+  box-shadow: 0 1px 4px 2px #d2d7e0;
   border-radius: 5px;
 }
 

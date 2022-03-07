@@ -80,11 +80,6 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .plus {
   color: #9898ae;
   display: flex;

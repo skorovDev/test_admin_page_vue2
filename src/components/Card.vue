@@ -124,13 +124,16 @@ export default {
 
     .user {
       color: #ffffff;
-      //text-align: center;
-      padding-top: 2px;
+      padding: 0;
       height: 30px;
       width: 30px;
       border-radius: 50%;
       background: #d8d8e4;
       border: none;
+
+      svg {
+        padding: 0 7px;
+      }
 
       &:hover {
         cursor: pointer;

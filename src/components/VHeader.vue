@@ -143,13 +143,15 @@ export default {
     //}
 
     &-user {
-      text-align: center;
-      padding-top: 2px;
+      padding: 0;
       margin: 0 40px 0 20px;
       height: 30px;
       width: 30px;
       border-radius: 50%;
       background: #d8d8e4;
+      svg {
+        padding: 0 7px;
+      }
 
       &:hover {
         cursor: pointer;
