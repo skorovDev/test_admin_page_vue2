@@ -2,7 +2,15 @@
   <div class="board">
     <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
-    <transition-group name="list" tag="div" class="board-cards">
+    <draggable
+      :list="cards"
+      group="people"
+      @change="log"
+      @add="add"
+      @remove="remove"
+      :move="move"
+    >
+      <!--      <transition-group name="list" tag="div" class="board-cards">-->
       <card
         v-for="(card, index) in cards"
         :key="index"
@@ -12,7 +20,8 @@
         :count-of-files="card.countOfFiles"
         :priority="card.priority"
       />
-    </transition-group>
+      <!--      </transition-group>-->
+    </draggable>
     <div class="add-btn d-flex align-self-center">
       <button>
         Add task
@@ -24,10 +33,11 @@
 
 <script>
 import Card from "@/components/Card";
+import Draggable from "vuedraggable";
 
 export default {
   name: "Board",
-  components: { Card },
+  components: { Card, Draggable },
   data: () => ({
     statuses: { 1: "backlog", 2: "in_progress", 3: "review", 4: "complete" },
   }),
@@ -39,6 +49,28 @@ export default {
   computed: {
     statusClass() {
       return `border-gradient-${this.statuses[this.status]}`;
+    },
+  },
+  methods: {
+    add(qqq) {
+      console.log(`add board = ${this.title}`, qqq);
+      // this.list.push({ name: "Juan" });
+    },
+    remove(qqq) {
+      console.log(`remove board = ${this.title}`, qqq);
+      // this.list = [{ name: "Edgard" }];
+    },
+    clone(el) {
+      return {
+        name: el.name + " cloned",
+      };
+    },
+    log(e) {
+      console.log(e);
+    },
+    move(data) {
+      console.log(this.title);
+      console.log("move", data);
     },
   },
 };
