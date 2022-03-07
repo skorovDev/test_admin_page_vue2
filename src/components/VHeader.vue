@@ -1,6 +1,9 @@
 <template>
   <div class="right-site-header d-flex justify-content-between">
     <div class="header-search">
+      <div class="header-search-h">
+        <span class="desktop">hussle</span> <span class="mobile">H</span>
+      </div>
       <div class="header-search-icon">
         <font-awesome-icon icon="magnifying-glass" />
       </div>
@@ -54,8 +57,23 @@ export default {
 
   .header-search {
     display: flex;
-    align-self: center;
+    align-items: center;
     max-height: 100%;
+
+    &-h {
+      background: #8690db;
+      font-size: 20px;
+      color: #ffffff;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 30px;
+      min-height: 60px;
+      max-height: 60px;
+      display: none;
+      @media screen and (max-width: 540px) {
+        display: flex;
+      }
+    }
 
     &-icon {
       margin: 0 10px 0 20px;
@@ -90,11 +108,21 @@ export default {
         &:focus {
           outline: none;
         }
+
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
       }
 
       input:focus + .header-search-input-border {
         width: 100%;
       }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .header-item-name {
+      display: none;
     }
   }
 

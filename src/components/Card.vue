@@ -124,7 +124,7 @@ export default {
 
     .user {
       color: #ffffff;
-      text-align: center;
+      //text-align: center;
       padding-top: 2px;
       height: 30px;
       width: 30px;

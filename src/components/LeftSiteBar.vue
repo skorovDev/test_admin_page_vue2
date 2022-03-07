@@ -53,15 +53,19 @@ export default {
 .left-site-bar {
   height: 100%;
   position: fixed;
-  transition: 0.5s;
   flex: 0 1 120px;
   @media screen and (max-width: 800px) {
     flex: 0 1 70px;
+  }
+  @media screen and (max-width: 540px) {
+    flex: 0 1 70px;
+    left: -70px;
   }
 }
 
 .left {
   &-site-bar-header {
+    //transition: 0.5s !;
     background: #8690db;
     font-size: 20px;
     color: #ffffff;

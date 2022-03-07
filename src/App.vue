@@ -153,7 +153,13 @@ export default {
   flex-direction: column;
   flex: 1 1 100%;
   min-width: 100%;
-  //max-width: calc(100% - 120px);
+  transition: 0.5s;
+  @media screen and (max-width: 800px) {
+    padding-left: 70px;
+  }
+  @media screen and (max-width: 540px) {
+    padding-left: 0;
+  }
 }
 
 .right-content {
