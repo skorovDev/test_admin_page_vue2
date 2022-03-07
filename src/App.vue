@@ -70,10 +70,10 @@ export default {
     filterTasks(text) {
       this.filterText = text;
     },
-    addCard(bordIndex, { card, newIndex }) {
-      console.log(card, card.text);
+    addCard(bordIndex, { card = {}, newIndex }) {
       const board = this.boards[bordIndex];
-      board.cards.splice(newIndex, 0, card);
+      if (!board.cards.find((c) => c.id === card.id))
+        board.cards.splice(newIndex, 0, card);
     },
     removeCard(bordIndex, cardIndex) {
       const board = this.boards[bordIndex];

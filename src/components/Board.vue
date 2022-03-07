@@ -2,11 +2,17 @@
   <div class="board">
     <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
-    <draggable :list="cards" group="people" @add="add" @remove="remove">
-      <transition-group name="list" tag="div" class="board-cards">
+    <draggable
+      :list="cards"
+      group="people"
+      class="board-cards"
+      @add="add"
+      @remove="remove"
+    >
+      <transition-group name="list" tag="div">
         <card
-          v-for="(card, index) in cards"
-          :key="index"
+          v-for="card in cards"
+          :key="card.id"
           :text="card.text"
           :users="card.users"
           :count-of-comments="card.countOfComments"
@@ -48,6 +54,7 @@ export default {
     getCardByIndex(index) {
       return this.cards[index];
     },
+
     add({ oldIndex, newIndex }) {
       // console.log("add", this.title);
       const card = this.getCardByIndex(oldIndex);
@@ -106,7 +113,7 @@ export default {
 
 .board-cards {
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
   padding-right: 10px;
 }
 
