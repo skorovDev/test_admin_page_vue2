@@ -148,10 +148,12 @@ export default {
 }
 
 .right {
+  padding-left: 120px;
   display: flex;
   flex-direction: column;
   flex: 1 1 100%;
-  max-width: calc(100% - 120px);
+  min-width: 100%;
+  //max-width: calc(100% - 120px);
 }
 
 .right-content {

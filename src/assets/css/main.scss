@@ -11,6 +11,7 @@ html, body {
   max-height: 100vh;
 }
 
+
 button {
   transition: 0.5s;
 }
@@ -18,4 +19,30 @@ button {
 button:hover {
   box-shadow: 0 4px 5px #999;
   transform: translateY(-2px);
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .right {
+    padding-left: 70px;
+  }
+  .menu-item-label {
+    display: none;
+  }
+
+  .left-site-bar-header {
+    width: 70px;
+    transition: 0.5s;
+
+
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }

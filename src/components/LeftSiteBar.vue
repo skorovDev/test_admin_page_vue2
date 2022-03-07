@@ -1,6 +1,8 @@
 <template>
   <div class="left-site-bar d-flex flex-column">
-    <div class="left-site-bar-header">hussle</div>
+    <div class="left-site-bar-header">
+      <span class="desktop">hussle</span> <span class="mobile">H</span>
+    </div>
 
     <div class="left-site-bar-menu-group">
       <div class="left-site-bar-menu-group-top">
@@ -49,7 +51,13 @@ export default {
 
 <style scoped lang="scss">
 .left-site-bar {
+  height: 100%;
+  position: fixed;
+  transition: 0.5s;
   flex: 0 1 120px;
+  @media screen and (max-width: 800px) {
+    flex: 0 1 70px;
+  }
 }
 
 .left {
