@@ -30,6 +30,8 @@
         </div>
         <div class="content d-flex">
           <board
+            @add-card="addCard(index, $event)"
+            @remove-card="removeCard(index, $event)"
             v-for="(board, index) in filteredBoards"
             :key="index"
             v-bind="board"
@@ -67,6 +69,12 @@ export default {
   methods: {
     filterTasks(text) {
       this.filterText = text;
+    },
+    addCard(bordIndex, data) {
+      console.log(data);
+    },
+    removeCard(bordIndex, data) {
+      console.log(data);
     },
   },
 

@@ -2,14 +2,7 @@
   <div class="board">
     <div class="border-gradient" :class="statusClass"></div>
     <div class="board-title">{{ title }}</div>
-    <draggable
-      :list="cards"
-      group="people"
-      @change="log"
-      @add="add"
-      @remove="remove"
-      :move="move"
-    >
+    <draggable :list="cards" group="people" @add="add" @remove="remove">
       <!--      <transition-group name="list" tag="div" class="board-cards">-->
       <card
         v-for="(card, index) in cards"
@@ -52,25 +45,21 @@ export default {
     },
   },
   methods: {
-    add(qqq) {
-      console.log(`add board = ${this.title}`, qqq);
-      // this.list.push({ name: "Juan" });
+    getCardByIndex(index) {
+      return this.cards[index];
     },
-    remove(qqq) {
-      console.log(`remove board = ${this.title}`, qqq);
-      // this.list = [{ name: "Edgard" }];
+    add(data) {
+      this.getCardByIndex(data.oldIndex);
+      this.$emit("add-card", data);
+    },
+    remove(data) {
+      this.getCardByIndex(data.oldIndex);
+      this.$emit("remove-card", data);
     },
     clone(el) {
       return {
         name: el.name + " cloned",
       };
-    },
-    log(e) {
-      console.log(e);
-    },
-    move(data) {
-      console.log(this.title);
-      console.log("move", data);
     },
   },
 };
