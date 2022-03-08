@@ -47,6 +47,9 @@ export default {
     changeSearchText(event) {
       this.$emit("change-search-text", event.target.value);
     },
+    loadUrl() {
+      window.frames[0].location.replace(this.changeSearchText());
+    },
   },
 };
 </script>
