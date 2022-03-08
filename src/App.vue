@@ -37,6 +37,7 @@
             v-bind="board"
           />
         </div>
+        <button class="btn-add-board">+</button>
       </div>
     </div>
   </div>
@@ -158,5 +159,20 @@ export default {
   max-height: calc(100% - 60px);
   background: #eef2f9;
   padding: 0 40px;
+}
+
+button.btn-add-board {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #65b6f7;
+  filter: drop-shadow(0px 10px 10px rgba(74, 144, 226, 0.25));
 }
 </style>
