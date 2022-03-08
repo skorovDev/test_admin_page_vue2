@@ -2,10 +2,7 @@
   <div class="right-site-header d-flex justify-content-between">
     <div class="header-search">
       <div class="header-search-h">
-        <button class="btn-header">
-          <span class="desktop">hussle</span>
-          <span class="mobile">H</span>
-        </button>
+        <btn-header />
       </div>
       <div class="header-search-icon">
         <font-awesome-icon icon="magnifying-glass" />
@@ -36,8 +33,10 @@
 </template>
 
 <script>
+import BtnHeader from "@/components/BtnHeader";
 export default {
   name: "VHeader",
+  components: { BtnHeader },
   methods: {
     changeSearchText(event) {
       this.$emit("change-search-text", event.target.value);

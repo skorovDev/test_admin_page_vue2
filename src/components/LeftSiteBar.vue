@@ -1,10 +1,7 @@
 <template>
   <div class="left-site-bar left-site-bar-menu-mobile d-flex flex-column">
     <div class="left-site-bar-header">
-      <button class="btn-header">
-        <span class="desktop">hussle</span>
-        <span class="mobile">H</span>
-      </button>
+      <btn-header v-on:click="myFilter" />
     </div>
 
     <div class="left-site-bar-menu-group">
@@ -24,10 +21,11 @@
 
 <script>
 import MenuItem from "@/components/MunuItem";
+import BtnHeader from "@/components/BtnHeader";
 
 export default {
   name: "LeftSiteBar",
-  components: { MenuItem },
+  components: { BtnHeader, MenuItem },
   data: () => ({
     menuItems: [
       {
