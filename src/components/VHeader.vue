@@ -2,7 +2,7 @@
   <div class="right-site-header d-flex justify-content-between">
     <div class="header-search">
       <div class="header-search-h">
-        <btn-header />
+        <logo-btn @click="toggleLeftSiteBar" />
       </div>
       <div class="header-search-icon">
         <font-awesome-icon icon="magnifying-glass" />
@@ -33,11 +33,17 @@
 </template>
 
 <script>
-import BtnHeader from "@/components/BtnHeader";
+import LogoBtn from "@/components/LogoBtn";
+
 export default {
   name: "VHeader",
-  components: { BtnHeader },
+  components: { LogoBtn },
   methods: {
+    toggleLeftSiteBar() {
+      document
+        .querySelector(".left-site-bar")
+        .classList.toggle("left-site-bar-menu-show");
+    },
     changeSearchText(event) {
       this.$emit("change-search-text", event.target.value);
     },

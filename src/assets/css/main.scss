@@ -23,10 +23,11 @@ button.btn-header {
   color: #ffff;
   padding: 0;
   border-radius: 50%;
+  transition: .5s;
 }
 
 button {
-  transition: 0.5s;
+  transition: .5s;
 }
 
 button:hover {

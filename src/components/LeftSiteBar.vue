@@ -1,7 +1,7 @@
 <template>
-  <div class="left-site-bar left-site-bar-menu-mobile d-flex flex-column">
+  <div class="left-site-bar d-flex flex-column">
     <div class="left-site-bar-header">
-      <btn-header v-on:click="myFilter" />
+      <logo-btn />
     </div>
 
     <div class="left-site-bar-menu-group">
@@ -21,11 +21,11 @@
 
 <script>
 import MenuItem from "@/components/MunuItem";
-import BtnHeader from "@/components/BtnHeader";
+import LogoBtn from "@/components/LogoBtn";
 
 export default {
   name: "LeftSiteBar",
-  components: { BtnHeader, MenuItem },
+  components: { LogoBtn, MenuItem },
   data: () => ({
     menuItems: [
       {
@@ -47,6 +47,9 @@ export default {
       },
     ],
   }),
+  methods: {
+    myFilter() {},
+  },
 };
 </script>
 
@@ -55,21 +58,32 @@ export default {
   height: 100%;
   position: fixed;
   flex: 0 1 120px;
+  left: 0;
+  transition: left 0.5s;
+  z-index: 2;
+  background-color: #fff;
+  bottom: 0;
+
+  $_this: &;
+
   @media screen and (max-width: 800px) {
     flex: 0 1 70px;
   }
   @media screen and (max-width: 540px) {
     flex: 0 1 70px;
     left: -70px;
+    height: calc(100% - 60px);
+
+    #{$_this}-header {
+      display: none;
+    }
   }
-}
 
-.left-site-bar-menu-mobile {
-}
+  &-menu-show {
+    left: 0;
+  }
 
-.left {
-  &-site-bar-header {
-    //transition: 0.5s !;
+  &-header {
     background: #8690db;
     font-size: 20px;
     color: #ffffff;
@@ -81,7 +95,7 @@ export default {
     max-height: 60px;
   }
 
-  &-site-bar-menu-group {
+  &-menu-group {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;

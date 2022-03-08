@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-header">
+  <button class="btn-header" v-on="$listeners">
     <span class="desktop">hussle</span>
     <span class="mobile">H</span>
   </button>
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "BtnHeader",
+  name: "LogoBtn",
 };
 </script>
 
