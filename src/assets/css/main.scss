@@ -17,6 +17,14 @@ html, body {
   height: 100%;
 }
 
+button.btn-header {
+  background: none;
+  border: none;
+  color: #ffff;
+  padding: 0;
+  border-radius: 50%;
+}
+
 button {
   transition: 0.5s;
 }

@@ -2,7 +2,10 @@
   <div class="right-site-header d-flex justify-content-between">
     <div class="header-search">
       <div class="header-search-h">
-        <span class="desktop">hussle</span> <span class="mobile">H</span>
+        <button class="btn-header">
+          <span class="desktop">hussle</span>
+          <span class="mobile">H</span>
+        </button>
       </div>
       <div class="header-search-icon">
         <font-awesome-icon icon="magnifying-glass" />

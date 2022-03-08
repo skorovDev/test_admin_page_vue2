@@ -1,7 +1,10 @@
 <template>
-  <div class="left-site-bar d-flex flex-column">
+  <div class="left-site-bar left-site-bar-menu-mobile d-flex flex-column">
     <div class="left-site-bar-header">
-      <span class="desktop">hussle</span> <span class="mobile">H</span>
+      <button class="btn-header">
+        <span class="desktop">hussle</span>
+        <span class="mobile">H</span>
+      </button>
     </div>
 
     <div class="left-site-bar-menu-group">
@@ -61,6 +64,9 @@ export default {
     flex: 0 1 70px;
     left: -70px;
   }
+}
+
+.left-site-bar-menu-mobile {
 }
 
 .left {
