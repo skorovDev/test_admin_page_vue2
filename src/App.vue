@@ -68,6 +68,7 @@ export default {
     },
   },
   methods: {
+    //TODO: add method for adding boards
     filterTasks(text) {
       this.filterText = text;
     },

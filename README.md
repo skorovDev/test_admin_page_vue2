@@ -23,4 +23,7 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+[Faker](https://github.com/faker-js/faker)
+
+
 Awesome font [npm](https://www.npmjs.com/package/@fortawesome/vue-fontawesome#installation)
