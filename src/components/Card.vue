@@ -91,6 +91,7 @@ export default {
   padding: 10px;
   background: #ffffff;
   border-radius: 5px;
+  z-index: 2;
 
   &:not(:last-child) {
     margin-bottom: 10px;

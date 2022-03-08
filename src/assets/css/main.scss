@@ -17,13 +17,22 @@ html, body {
   height: 100%;
 }
 
-button.btn-header {
+button.btn-header-logo {
   background: none;
   border: none;
   color: #ffff;
   padding: 0;
-  border-radius: 50%;
   transition: .5s;
+
+  &:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  @media screen and (max-width: 540px) {
+    transform: translateY(2px);
+  }
+
 }
 
 button {

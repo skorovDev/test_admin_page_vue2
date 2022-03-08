@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-header" v-on="$listeners">
+  <button class="btn-header-logo" v-on="$listeners">
     <span class="desktop">hussle</span>
     <span class="mobile">H</span>
   </button>
