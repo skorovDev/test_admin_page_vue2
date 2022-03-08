@@ -45,10 +45,20 @@ export default {
         .classList.toggle("left-site-bar-menu-show");
     },
     changeSearchText(event) {
-      this.$emit("change-search-text", event.target.value);
-    },
-    loadUrl() {
-      window.frames[0].location.replace(this.changeSearchText());
+      //TODO: change window url without reload page
+      const value = event.target.value;
+      const url = window.location.href;
+      const windowUrl = new URL(url);
+
+      windowUrl.searchParams.delete("filter-text");
+
+      if (value) {
+        windowUrl.searchParams.append("filter-text", value);
+      }
+
+      window.history.replaceState(null, null, windowUrl);
+
+      this.$emit("change-search-text", value);
     },
   },
 };
