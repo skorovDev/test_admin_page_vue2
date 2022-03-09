@@ -36,6 +36,7 @@
               <b> {{ user.first_name }} {{ user.last_name }} </b>
             </div>
             <div>{{ user.phone }}</div>
+            <div>{{ user.email }}</div>
           </user-icon>
         </div>
         <div class="counts-user" v-if="countOverShortUserList">

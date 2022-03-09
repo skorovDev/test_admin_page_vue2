@@ -22,6 +22,7 @@
                   <b> {{ user.first_name }} {{ user.last_name }} </b>
                 </div>
                 <div>{{ user.phone }}</div>
+                <div>{{ user.email }}</div>
               </user-icon>
             </template>
             <span class="count-user-header"
