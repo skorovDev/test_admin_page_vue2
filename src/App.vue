@@ -16,15 +16,10 @@
             </div>
           </div>
           <div class="d-flex">
-            <button class="user">
-              <font-awesome-icon icon="user-large" />
-            </button>
-            <button class="user">
-              <font-awesome-icon icon="user-large" />
-            </button>
-            <button class="user">
-              <font-awesome-icon icon="user-large" />
-            </button>
+            <template v-for="(user) in users">
+              <user-item :avatar="user.avatar" :key="user.id"/>
+            </template>
+
             <button class="plus">+</button>
           </div>
         </div>
@@ -47,16 +42,24 @@
 import LeftSiteBar from "@/components/LeftSiteBar";
 import VHeader from "@/components/VHeader";
 import Board from "@/components/Board";
-import boards from "@/data/boards.json";
+// import boards from "@/data/boards.json";
+import fakeBoards from "@/data/generate-data.js";
+import { makeUser } from "@/data/generate-data.js";
+import UserItem from "@/components/UserItem";
 
 export default {
   name: "App",
-  components: { Board, VHeader, LeftSiteBar },
+  components: { UserItem, Board, VHeader, LeftSiteBar },
   data: () => ({
     filterText: "",
-    boards,
+    boards: fakeBoards(8),
   }),
   computed: {
+    users() {
+      return Array(10)
+        .fill(0)
+        .map(() => makeUser());
+    },
     filteredBoards() {
       return this.boards.map((board) => {
         const newBoard = { ...board };
@@ -67,6 +70,7 @@ export default {
       });
     },
   },
+  beforeMount() {},
   methods: {
     //TODO: add method for adding boards
     filterTasks(text) {

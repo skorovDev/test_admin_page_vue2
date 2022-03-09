@@ -29,7 +29,8 @@
             :key="index"
             :style="userZIndex(index)"
           >
-            <font-awesome-icon icon="user-large" />
+            <img :src="user.avatar" alt="" />
+            <!--            <font-awesome-icon icon="user-large" />-->
           </button>
         </div>
         <div class="counts-user" v-if="countOverShortUserList">
@@ -57,10 +58,10 @@ export default {
   }),
   computed: {
     priorityLabel() {
-      return this.priorityText[this.priority - 1];
+      return this.priorityText[this.priority];
     },
     priorityClass() {
-      return this.priorityLabel.replace(" ", "-").toLowerCase();
+      return this.priorityLabel?.replace(" ", "-").toLowerCase();
     },
     shortUserList() {
       return this.users.slice(0, 4);

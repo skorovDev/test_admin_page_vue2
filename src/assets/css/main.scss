@@ -34,7 +34,9 @@ button.btn-header-logo {
   }
 
 }
-
+img {
+  max-width: 100%;
+}
 button {
   transition: .5s;
 }
@@ -49,13 +51,14 @@ button:hover {
 }
 
 .user {
+  border: solid 1px #7a838f;
+  overflow: hidden;
   color: #ffffff;
   padding: 0;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background: #d8d8e4;
-  border: none;
 
   svg {
     padding: 0 7px;
