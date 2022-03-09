@@ -95,6 +95,12 @@ export default {
   background: #ffffff;
   border-radius: 5px;
   z-index: 2;
+  &:hover {
+    cursor: grab;
+  }
+  &:active {
+    cursor: grabbing;
+  }
 
   &:not(:last-child) {
     margin-bottom: 10px;

@@ -17,7 +17,13 @@
           </div>
           <div class="d-flex">
             <template v-for="user in shortUserList">
-              <user-icon :avatar="user.avatar" :key="user.id">
+              <user-icon
+                :avatar="user.avatar"
+                :key="user.id"
+                :first_name="user.first_name"
+                :last_name="user.last_name"
+                :phone="user.phone"
+              >
                 <div>
                   <b> {{ user.first_name }} {{ user.last_name }} </b>
                 </div>
