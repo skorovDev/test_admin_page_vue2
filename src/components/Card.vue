@@ -31,13 +31,7 @@
             :first_name="user.first_name"
             :last_name="user.last_name"
             :phone="user.phone"
-          >
-            <div>
-              <b> {{ user.first_name }} {{ user.last_name }} </b>
-            </div>
-            <div>{{ user.phone }}</div>
-            <div>{{ user.email }}</div>
-          </user-icon>
+          />
         </div>
         <div class="counts-user" v-if="countOverShortUserList">
           + {{ countOverShortUserList }}

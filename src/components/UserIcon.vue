@@ -1,7 +1,7 @@
 <template>
   <button class="user" :title="`${first_name} ${last_name} ${phone}`">
     <img :src="avatar" alt="" />
-    <div class="user-info">
+    <div v-if="!!$slots.default" class="user-info">
       <slot />
     </div>
   </button>
