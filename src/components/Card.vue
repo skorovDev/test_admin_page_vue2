@@ -23,15 +23,21 @@
         <button class="plus">+</button>
 
         <div class="users d-flex">
-          <button
-            class="user"
+          <user-icon
             v-for="(user, index) in shortUserList"
-            :key="index"
+            :key="user.id"
+            :avatar="user.avatar"
             :style="userZIndex(index)"
-          >
-            <img :src="user.avatar" alt="" />
-            <!--            <font-awesome-icon icon="user-large" />-->
-          </button>
+          />
+          <!--          <button-->
+          <!--            class="user"-->
+          <!--            v-for="(user, index) in shortUserList"-->
+          <!--            :key="index"-->
+          <!--           "-->
+          <!--          >-->
+          <!--            <img :src="user.avatar" alt="" />-->
+          <!--            &lt;!&ndash;            <font-awesome-icon icon="user-large" />&ndash;&gt;-->
+          <!--          </button>-->
         </div>
         <div class="counts-user" v-if="countOverShortUserList">
           + {{ countOverShortUserList }}
@@ -42,10 +48,12 @@
 </template>
 
 <script>
+import UserIcon from "@/components/UserIcon";
 const baseMarginRight = 15;
 
 export default {
   name: "Card",
+  components: { UserIcon },
   props: {
     text: {},
     users: {},

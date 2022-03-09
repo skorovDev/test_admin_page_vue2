@@ -34,9 +34,11 @@ button.btn-header-logo {
   }
 
 }
+
 img {
   max-width: 100%;
 }
+
 button {
   transition: .5s;
 }
@@ -50,28 +52,6 @@ button:hover {
   display: none;
 }
 
-.user {
-  border: solid 1px #7a838f;
-  overflow: hidden;
-  color: #ffffff;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #d8d8e4;
-
-  svg {
-    padding: 0 7px;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:last-child {
-    margin-right: 0 !important;
-  }
-}
 
 @media screen and (max-width: 800px) {
 

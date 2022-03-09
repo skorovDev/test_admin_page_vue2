@@ -16,10 +16,17 @@
             </div>
           </div>
           <div class="d-flex">
-            <template v-for="(user) in users">
-              <user-item :avatar="user.avatar" :key="user.id"/>
+            <template v-for="user in shortUserList">
+              <user-icon :avatar="user.avatar" :key="user.id">
+                <div>
+                  <b> {{ user.first_name }} {{ user.last_name }} </b>
+                </div>
+                <div>{{ user.phone }}</div>
+              </user-icon>
             </template>
-
+            <span class="count-user-header"
+              >+ {{ countOverShortUserList }}</span
+            >
             <button class="plus">+</button>
           </div>
         </div>
@@ -45,20 +52,27 @@ import Board from "@/components/Board";
 // import boards from "@/data/boards.json";
 import fakeBoards from "@/data/generate-data.js";
 import { makeUser } from "@/data/generate-data.js";
-import UserItem from "@/components/UserItem";
+import UserIcon from "@/components/UserIcon";
 
 export default {
   name: "App",
-  components: { UserItem, Board, VHeader, LeftSiteBar },
+  components: { UserIcon, Board, VHeader, LeftSiteBar },
   data: () => ({
     filterText: "",
-    boards: fakeBoards(8),
+    boards: fakeBoards(8, 10, 10),
   }),
   computed: {
     users() {
       return Array(10)
         .fill(0)
         .map(() => makeUser());
+    },
+    shortUserList() {
+      return this.users.slice(0, 3);
+    },
+    countOverShortUserList() {
+      const count = this.users.length - 4;
+      return count > 0 ? count : false;
     },
     filteredBoards() {
       return this.boards.map((board) => {
@@ -110,7 +124,12 @@ export default {
     cursor: pointer;
   }
 }
-
+.count-user-header {
+  display: flex;
+  align-self: center;
+  color: #7a838f;
+  margin-right: 10px;
+}
 .user {
   margin-right: 10px;
 }
