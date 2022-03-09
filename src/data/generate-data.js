@@ -31,6 +31,7 @@ export function makeUser() {
     last_name: faker.name.lastName(),
     avatar: faker.image.avatar(),
     phone: faker.phone.phoneNumber(),
+    email: faker.internet.email(),
   };
 }
 
