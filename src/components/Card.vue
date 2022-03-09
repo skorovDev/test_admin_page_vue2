@@ -28,16 +28,15 @@
             :key="user.id"
             :avatar="user.avatar"
             :style="userZIndex(index)"
-          />
-          <!--          <button-->
-          <!--            class="user"-->
-          <!--            v-for="(user, index) in shortUserList"-->
-          <!--            :key="index"-->
-          <!--           "-->
-          <!--          >-->
-          <!--            <img :src="user.avatar" alt="" />-->
-          <!--            &lt;!&ndash;            <font-awesome-icon icon="user-large" />&ndash;&gt;-->
-          <!--          </button>-->
+            :first_name="user.first_name"
+            :last_name="user.last_name"
+            :phone="user.phone"
+          >
+            <div>
+              <b> {{ user.first_name }} {{ user.last_name }} </b>
+            </div>
+            <div>{{ user.phone }}</div>
+          </user-icon>
         </div>
         <div class="counts-user" v-if="countOverShortUserList">
           + {{ countOverShortUserList }}
