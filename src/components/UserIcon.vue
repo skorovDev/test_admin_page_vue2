@@ -44,7 +44,7 @@ export default {
 
   &-info {
     border-radius: 5px;
-    box-shadow: 0 4px 5px #999;
+    box-shadow: 0 2px 3px 0px #999;
     right: 0;
     margin-top: 10px;
     position: absolute;
@@ -53,7 +53,6 @@ export default {
     background: #ffffff;
     font-size: 14px;
     color: #7a838f;
-    width: 200px;
   }
 
   &:hover {
